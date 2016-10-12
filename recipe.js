@@ -13,12 +13,14 @@ function removeIngredient(recipe, ingredient) {
 }
 
 function updateIngredient(recipe, ingredient, amount) {
-  return addIngredient(recipe, ingredient, amount);
+  recipe[ingredient] = amount;
+
+  return recipe;
 }
 
 function readRecipe(recipe) {
   for (var key in recipe) {
-    // console.log(`this recipe calls for ${recipe[key]} of ${key}`); 
+    // console.log(`this recipe calls for ${recipe[key]} of ${key}`);
     console.log("this recipe calls for " + recipe[key] + " of " + key);
   }
 }
